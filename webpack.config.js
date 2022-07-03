@@ -11,6 +11,16 @@ module.exports = {
     },
     resolve: {
         extensions: ['.js', '.jsx'],
+        //alias en las rutas para no usar ../
+        alias: {
+            '@components': path.resolve(__dirname, 'src/components/'),
+            '@containers': path.resolve(__dirname, 'src/containers/'),
+            '@pages': path.resolve(__dirname, 'src/pages/'),
+            '@routes': path.resolve(__dirname, 'src/routes/'),
+            '@styles': path.resolve(__dirname, 'src/styles/'),
+            '@logos': path.resolve(__dirname, 'src/assets/logos/'),
+            '@icons': path.resolve(__dirname, 'src/assets/icons/')
+        }
     },
     mode: 'development',
     module: {
@@ -37,6 +47,17 @@ module.exports = {
                     "css-loader",
                     "sass-loader",
                 ],
+            },
+            {
+                //no me cargaban las imágenes, realice el siguiente proceso para solucionarlo:
+//Instale file-loader
+//npm install --save-dev file-loader
+//{
+//    test: /\.(png|svg|jpg|gif)$/,
+//    use: 'file-loader',
+ // }
+               test: /\.(png|svg|jpg|gif)$/,
+               use: 'file-loader', 
             }
         ]
     },
@@ -53,3 +74,4 @@ module.exports = {
         historyApiFallback: true,
     }
 }
+
