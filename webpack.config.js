@@ -9,6 +9,7 @@ module.exports = {
         filename: 'bundle.js',
         publicPath: '/'
     },
+    mode: 'development',
     resolve: {
         extensions: ['.js', '.jsx'],
         //alias en las rutas para no usar ../
