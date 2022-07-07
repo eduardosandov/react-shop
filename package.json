@@ -1,5 +1,9 @@
 {
   "name": "react-shop",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/j-eduardosandoval/react-shop.git"
+  },
   "version": "1.0.0",
   "description": "react eshop",
   "main": "src/index.js",
